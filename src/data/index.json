@@ -24,6 +24,7 @@
       "title": "Valtech Offices",
       "cards":[
         {
+          "id": "1",
           "type":"CARD",
           "title":"Venice",
           "subtitle":"Italy",
@@ -41,6 +42,7 @@
           }
         },
         {
+          "id": "2",
           "type":"CARD",
           "title":"Berlin",
           "subtitle":"Germany",
@@ -58,6 +60,7 @@
           }
         },
         {
+          "id": "3",
           "type":"CARD",
           "title":"Barcelona",
           "subtitle":"Spain",
@@ -69,6 +72,7 @@
           }
         },
         {
+          "id": "4",
           "type":"CARD",
           "title":"Berlin",
           "subtitle":"Germany",
@@ -86,6 +90,7 @@
           }
         },
         {
+          "id": "5",
           "type":"CARD",
           "title":"Amsterdam",
           "subtitle":"Netherlands",
@@ -103,6 +108,7 @@
           }
         },
         {
+          "id": "6",
           "type":"CARD",
           "title":"London",
           "subtitle":"United Kingdom",
