@@ -1,5 +1,8 @@
-import ArticlePageView from "@/components/article/ArticlePageView";
+import { ArticlePageView } from "@/components/article";
+import { getArticlePageData } from "@/data/repositories/article-page.repository";
 
 export default function ArticlePage() {
-  return <ArticlePageView />;
+  const articlePageData = getArticlePageData();
+
+  return <ArticlePageView data={articlePageData} />;
 }
