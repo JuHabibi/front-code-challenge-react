@@ -11,9 +11,12 @@ export interface HeroContentBlock {
   foregroundAsset: MediaAsset;
 }
 
+export type OfficeCardLayout = "default" | "wide";
+
 export interface OfficeCard {
   id: string;
   type: "CARD";
+  layout?: OfficeCardLayout;
   title: string;
   subtitle: string;
   description: string;

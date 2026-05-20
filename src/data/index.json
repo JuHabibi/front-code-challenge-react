@@ -26,6 +26,7 @@
         {
           "id": "1",
           "type":"CARD",
+          "layout":"wide",
           "title":"Venice",
           "subtitle":"Italy",
           "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",
@@ -110,6 +111,7 @@
         {
           "id": "6",
           "type":"CARD",
+          "layout":"wide",
           "title":"London",
           "subtitle":"United Kingdom",
           "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit in turpis eu volutpat. Quisque pellentesque scelerisque nisl, sit amet convallis orci convallis sit amet. Nam a neque dolor",

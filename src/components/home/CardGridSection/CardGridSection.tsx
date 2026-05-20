@@ -9,20 +9,15 @@ export function CardGridSection({ title, cards }: CardGridSectionProps) {
   return (
     <section>
       <h2>{title}</h2>
-
       <ul className={styles.grid}>
-        {cards.map((card, index) => {
-          const isWide = index === 0 || index === 5;
-
-          return (
+        {cards.map((card) => (
             <li
               key={card.id}
-              className={`${styles.gridItem} ${isWide ? styles.cardWide : ""}`}
+              className={`${styles.gridItem} ${card.layout === "wide" ? styles.cardWide : ""}`}
             >
               <OfficeCard {...card} />
             </li>
-          );
-        })}
+        ))}
       </ul>
     </section>
   );
