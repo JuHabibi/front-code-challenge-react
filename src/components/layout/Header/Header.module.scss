@@ -1,4 +1,4 @@
-@use "../../app/styles/token.scss" as *;
+@use "../../../styles" as *;
 
 .header {
   height: 100px;
@@ -19,4 +19,3 @@
   color: $color-off-white;
   font-weight: $font-weight-bold;
 }
-

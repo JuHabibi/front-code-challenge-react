@@ -1,5 +1,6 @@
-import styles from "./Header.module.scss";
 import Image from "next/image";
+
+import styles from "./Header.module.scss";
 
 type HeaderProps = {
   title?: string;
@@ -21,4 +22,3 @@ export function Header({ title }: HeaderProps) {
     </header>
   );
 }
-

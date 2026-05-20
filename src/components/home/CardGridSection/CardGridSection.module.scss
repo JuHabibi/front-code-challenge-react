@@ -1,0 +1,39 @@
+@use "../../../styles" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-20;
+}
+
+.gridItem {
+  height: 360px;
+}
+
+.cardWide {
+  grid-column: span 1;
+}
+
+@include respond(sm) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridItem {
+    height: 420px;
+  }
+
+  .cardWide {
+    grid-column: span 2;
+  }
+}
+
+@include respond(md) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gridItem {
+    height: $card-height;
+  }
+}

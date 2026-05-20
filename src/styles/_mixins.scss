@@ -1,4 +1,4 @@
-@use "./token.scss" as *;
+@use "tokens" as *;
 
 @mixin respond($breakpoint) {
   @if $breakpoint == sm {

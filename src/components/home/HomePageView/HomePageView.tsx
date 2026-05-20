@@ -1,10 +1,9 @@
 import { assertNever } from "@/lib/assert-never";
 import type { HomeContentBlock, HomePageData } from "@/types";
+import { Footer, Header } from "@/components/layout";
 
-import { Header } from "../layout";
-import { CardGridSection } from "./CardGridSection";
-import { HeroSection } from "./HeroSection";
-import { Footer } from "../layout";
+import { CardGridSection } from "../CardGridSection";
+import { HeroSection } from "../HeroSection";
 
 type HomePageViewProps = {
   data: HomePageData;
@@ -27,11 +26,8 @@ export function HomePageView({ data }: HomePageViewProps) {
   return (
     <main>
       <Header title={data.title} />
-      <div className="container">
-        {data.content.map(renderContentBlock)}
-      </div>
-        <Footer {...data.footer} />
-     
+      <div className="container">{data.content.map(renderContentBlock)}</div>
+      <Footer {...data.footer} />
     </main>
   );
 }
