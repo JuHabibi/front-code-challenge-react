@@ -3,7 +3,13 @@
 .backBar {
   max-width: $container-width;
   margin: 0 auto;
-  padding: $space-40 0 0 0;
+  padding: $space-40 0 0 $space-20;
   display: flex;
   justify-content: flex-start;
+}
+
+@include respond(md) {
+  .backBar {
+    padding: $space-40 0 0 0;
+  }
 }

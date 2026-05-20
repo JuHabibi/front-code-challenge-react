@@ -59,5 +59,12 @@ select {
   width: 100%;
   max-width: $container-width;
   margin: 0 auto;
-  padding: $space-60 0;
+  padding: $space-60 $space-20;
 }
+
+@include respond(md) {
+  .container {
+    padding: $space-60 0;
+  }
+}
+
