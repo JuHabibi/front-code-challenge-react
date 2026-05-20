@@ -5,6 +5,9 @@ import { Footer, Header } from "@/components/layout";
 import { CarouselSection } from "../CarouselSection";
 import { HeroArticleSection } from "../HeroArticleSection";
 import { ParagraphSection } from "../ParagraphSection";
+import { BackButton } from "./BackButton";
+
+import styles from "./ArticlePageView.module.scss";
 
 type ArticlePageViewProps = {
   data: ArticlePageData;
@@ -30,6 +33,9 @@ export function ArticlePageView({ data }: ArticlePageViewProps) {
     <>
       <Header title={data.title} />
       <main>
+        <div className={styles.backBar}>
+          <BackButton />
+        </div>
         <div className="container">{data.content.map(renderContentBlock)}</div>
       </main>
       <Footer {...data.footer} />

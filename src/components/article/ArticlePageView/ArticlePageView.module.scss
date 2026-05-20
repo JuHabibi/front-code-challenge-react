@@ -1,0 +1,9 @@
+@use "../../../styles" as *;
+
+.backBar {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $space-40 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+}

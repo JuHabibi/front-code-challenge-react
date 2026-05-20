@@ -18,6 +18,8 @@ export function HeroSection({
         src={backgroundAsset.url}
         alt=""
         aria-hidden="true"
+        width={1196}
+        height={480}
       />
 
       <img
@@ -25,6 +27,8 @@ export function HeroSection({
         src={foregroundAsset.url}
         alt=""
         aria-hidden="true"
+        width={345}
+        height={570}
       />
 
       <div className={styles.content}>
