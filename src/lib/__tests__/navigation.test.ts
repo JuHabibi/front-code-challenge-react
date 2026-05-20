@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { canNavigateBackToReferrer } from "@/lib/navigation";
+import {
+  canNavigateBack,
+  canNavigateBackToReferrer,
+  canUseHistoryBack,
+} from "@/lib/navigation";
 
 describe("canNavigateBackToReferrer", () => {
   const origin = "http://localhost:3000";
@@ -27,5 +31,49 @@ describe("canNavigateBackToReferrer", () => {
 
   it("returns false for invalid referrer", () => {
     expect(canNavigateBackToReferrer("not-a-url", origin)).toBe(false);
+  });
+});
+
+describe("canUseHistoryBack", () => {
+  it("returns true when the session has a previous history entry", () => {
+    expect(canUseHistoryBack(2)).toBe(true);
+  });
+
+  it("returns false on the first history entry", () => {
+    expect(canUseHistoryBack(1)).toBe(false);
+  });
+});
+
+describe("canNavigateBack", () => {
+  const origin = "http://localhost:3000";
+
+  it("allows back when referrer is missing but history has a previous entry", () => {
+    expect(
+      canNavigateBack({
+        referrer: "",
+        currentOrigin: origin,
+        historyLength: 2,
+      }),
+    ).toBe(true);
+  });
+
+  it("falls back to home navigation when referrer and history are empty", () => {
+    expect(
+      canNavigateBack({
+        referrer: "",
+        currentOrigin: origin,
+        historyLength: 1,
+      }),
+    ).toBe(false);
+  });
+
+  it("allows back for same-origin referrers without relying on history", () => {
+    expect(
+      canNavigateBack({
+        referrer: "http://localhost:3000/",
+        currentOrigin: origin,
+        historyLength: 1,
+      }),
+    ).toBe(true);
   });
 });

@@ -2,13 +2,15 @@
 
 import { useRouter } from "next/navigation";
 
+import { canNavigateBackInApp } from "@/lib/navigation";
+
 import styles from "./BackButton.module.scss";
 
 export function BackButton() {
   const router = useRouter();
 
-  const handleBack = () => {
-    if (window.history.length > 1) {
+  const handleClick = () => {
+    if (canNavigateBackInApp()) {
       router.back();
       return;
     }
@@ -20,7 +22,7 @@ export function BackButton() {
     <button
       type="button"
       className={styles.backButton}
-      onClick={handleBack}
+      onClick={handleClick}
       aria-label="Go back"
     >
       ← Back
