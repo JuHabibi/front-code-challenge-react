@@ -1,4 +1,4 @@
-export type { Cta, MediaAsset, MediaAssetType, PageFooter } from "./common";
+export type { Cta, MediaAsset, MediaAssetType, Footer } from "./common";
 export type {
   CardGridContentBlock,
   HeroContentBlock,

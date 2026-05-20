@@ -1,4 +1,4 @@
-import type { Cta, MediaAsset, PageFooter } from "./common";
+import type { Cta, MediaAsset, Footer } from "./common";
 
 export type HomePageType = "HOMEPAGE";
 
@@ -34,7 +34,7 @@ export interface HomePageData {
   keywords: string;
   pageType: HomePageType;
   content: HomeContentBlock[];
-  footer: PageFooter;
+  footer: Footer;
 }
 
 export function isHeroContentBlock(

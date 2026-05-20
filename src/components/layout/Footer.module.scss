@@ -1,0 +1,13 @@
+@use "../../app/styles/token.scss" as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: $color-black;
+
+    p {
+        color: $color-off-white;
+    }
+}

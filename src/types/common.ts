@@ -13,7 +13,7 @@ export interface Cta {
   target: "_blank" | "_self";
 }
 
-export interface PageFooter {
+export interface Footer {
   background: string;
   text: string;
 }

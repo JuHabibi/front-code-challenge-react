@@ -1,0 +1,22 @@
+@use "../../app/styles/token.scss" as *;
+
+.header {
+  height: 100px;
+  background: $color-red;
+}
+
+.inner {
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 $space-20;
+  display: flex;
+  align-items: center;
+  gap: $space-20;
+}
+
+.title {
+  color: $color-off-white;
+  font-weight: $font-weight-bold;
+}
+

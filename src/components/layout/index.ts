@@ -1,2 +1,3 @@
-export { PageFooter } from "./PageFooter";
+export { Header } from "./Header";
+export { Footer } from "./Footer";
 
