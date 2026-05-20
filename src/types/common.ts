@@ -9,7 +9,7 @@ export interface MediaAsset {
 export interface Cta {
   url: string;
   text: string;
-  ariaLabel: string;
+  ariaLabel?: string;
   target: "_blank" | "_self";
 }
 

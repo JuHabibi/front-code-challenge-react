@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CarouselContentBlock } from "@/types";
 
 import styles from "./CarouselSection.module.scss";
@@ -16,6 +16,15 @@ type CarouselSectionProps = CarouselContentBlock;
 export function CarouselSection({ items }: CarouselSectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [imageVisible, setImageVisible] = useState(true);
+  const transitionTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
+    };
+  }, []);
 
   if (items.length === 0) {
     return null;
@@ -38,10 +47,15 @@ export function CarouselSection({ items }: CarouselSectionProps) {
       return;
     }
 
+    if (transitionTimeoutRef.current) {
+      clearTimeout(transitionTimeoutRef.current);
+    }
+
     setImageVisible(false);
-    window.setTimeout(() => {
+    transitionTimeoutRef.current = window.setTimeout(() => {
       setActiveIndex(newIndex);
       setImageVisible(true);
+      transitionTimeoutRef.current = null;
     }, IMAGE_TRANSITION_MS);
   };
 

@@ -4,9 +4,12 @@ import styles from "./Footer.module.scss";
 
 type FooterProps = FooterData;
 
-export function Footer({ text }: FooterProps) {
+export function Footer({ text, background }: FooterProps) {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={styles.footer}
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <p>{text}</p>
     </footer>
   );

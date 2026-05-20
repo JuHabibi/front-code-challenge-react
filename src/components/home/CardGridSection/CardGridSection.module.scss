@@ -1,4 +1,4 @@
-@use "styles" as *;
+@use "../../../styles" as *;
 
 .grid {
   display: grid;
@@ -8,10 +8,6 @@
 
 .gridItem {
   height: 360px;
-}
-
-.cardWide {
-  grid-column: span 1;
 }
 
 @include respond(sm) {

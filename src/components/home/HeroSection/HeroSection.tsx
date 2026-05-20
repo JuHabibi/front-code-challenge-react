@@ -17,18 +17,17 @@ export function HeroSection({
         className={styles.backgroundImage}
         src={backgroundAsset.url}
         alt=""
-        aria-hidden="true"
-        width={1196}
-        height={480}
+        fetchPriority="high"
+        decoding="async"
+        aria-hidden
       />
 
       <img
         className={styles.foregroundImage}
         src={foregroundAsset.url}
         alt=""
-        aria-hidden="true"
-        width={345}
-        height={570}
+        decoding="async"
+        aria-hidden
       />
 
       <div className={styles.content}>

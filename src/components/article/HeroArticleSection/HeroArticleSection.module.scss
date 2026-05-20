@@ -1,76 +1,82 @@
-@use "styles" as *;
+@use "../../../styles" as *;
 
 .hero {
-    margin-bottom: $space-60;
-    h1{
-        font-size: $font-size-md;
-    }
-    .subtitle{
-        font-size: $font-size-sm;
-    }
+  margin-bottom: $space-60;
+
+  h1 {
+    font-size: $font-size-md;
   }
-  
+}
+
+.subtitle {
+  font-size: $font-size-sm;
+}
+
+.media {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.leftImage {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.rightPanel {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  background: $color-dark-grey;
+}
+
+.rightImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-40;
+  color: $color-white;
+  text-align: right;
+}
+
+@include respond(sm) {
+  .meta {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@include respond(md) {
   .media {
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 39fr 61fr;
+    min-height: 480px;
   }
-  
+
   .leftImage {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
+    height: 100%;
+    min-height: 480px;
   }
-  
+
   .rightPanel {
-    position: relative;
-    min-height: 320px;
-  
-    background: $color-dark-grey;
+    min-height: auto;
   }
-  
-  .content {
-    position: absolute;
-    inset: 0;
-  
-    z-index: 1;
-  
+
+  .meta {
+    padding-top: $space-60;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-    padding: $space-40;
-  
-    color: white;
-  
-    text-align: right;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: $font-size-xs;
   }
-  
-  @include respond(sm) {
-    .meta {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  
-  @include respond(md) {
-    .media {
-      grid-template-columns: 39fr 61fr;
-      min-height: 480px;
-    }
-  
-    .leftImage {
-      height: 100%;
-    }
-  
-    .rightPanel {
-      min-height: auto;
-    }
-  
-    .meta {
-      padding-top: $space-60;
-      display: flex;
-      justify-content: space-between;
-      font-style: italic;
-      font-size: $font-size-xs;
-    }
-  }
+}

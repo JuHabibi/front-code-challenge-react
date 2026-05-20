@@ -5,7 +5,9 @@
   justify-content: center;
   align-items: center;
   height: 400px;
-  background: $color-black;
+  background-color: $color-black;
+  background-size: cover;
+  background-position: center;
 
   p {
     color: $color-off-white;
