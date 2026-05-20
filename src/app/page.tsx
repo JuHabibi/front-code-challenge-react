@@ -1,9 +1,8 @@
-import styles from "./page.module.css";
+import { HomePageView } from "@/components/home";
+import { getHomePageData } from "@/data/repositories/home-page.repository";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      Valtech Front Challenge
-    </main>
-  );
+  const homePageData = getHomePageData();
+
+  return <HomePageView data={homePageData} />;
 }
