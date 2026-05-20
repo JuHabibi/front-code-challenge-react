@@ -7,7 +7,7 @@ type CardGridSectionProps = CardGridContentBlock;
 
 export function CardGridSection({ title, cards }: CardGridSectionProps) {
   return (
-    <section aria-label={title}>
+    <section>
       <div className="container">
         <h2>{title}</h2>
 

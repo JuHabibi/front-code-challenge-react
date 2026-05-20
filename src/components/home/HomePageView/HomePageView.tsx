@@ -24,10 +24,12 @@ function renderContentBlock(block: HomeContentBlock, index: number) {
 
 export function HomePageView({ data }: HomePageViewProps) {
   return (
-    <main>
+    <>
       <Header title={data.title} />
-      <div className="container">{data.content.map(renderContentBlock)}</div>
+      <main>
+        <div className="container">{data.content.map(renderContentBlock)}</div>
+      </main>
       <Footer {...data.footer} />
-    </main>
+    </>
   );
 }

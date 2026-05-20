@@ -17,7 +17,8 @@ export function OfficeCard({
       <img
         className={styles.image}
         src={backgroundAsset.url}
-        alt={backgroundAsset.alt}
+        alt=""
+        aria-hidden="true"
       />
 
       <div className={styles.content}>
@@ -29,7 +30,12 @@ export function OfficeCard({
           <Link
             href={cta.url}
             target={cta.target}
-            aria-label={cta.ariaLabel}
+            rel={cta.target === "_blank" ? "noopener noreferrer" : undefined}
+            aria-label={
+              cta.target === "_blank"
+                ? `${cta.text} about ${title} (opens in new tab)`
+                : `${cta.text} about ${title}`
+            }
             className={styles.cta}
           >
             {cta.text}

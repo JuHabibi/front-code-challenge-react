@@ -4,7 +4,14 @@
   position: relative;
   height: 100%;
   overflow: hidden;
+  transition:
+  transform 0.2s ease,
+  opacity 0.2s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
 }
+
 
 .image {
   position: absolute;
@@ -24,4 +31,27 @@
   align-items: center;
   text-align: center;
   padding: $space-20;
+  .subtitle, .title {
+    text-transform: uppercase;
+  }
+  .subtitle{
+    padding: 0 0 $space-20  0;
+  }
+  .description {
+    padding: $space-40 0;
+  }
+}
+.cta {
+  background: $color-off-white;
+  border : 1px solid #000000;
+  padding: $space-20 $space-60;
+  font-size: $font-size-xs;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  &:hover {
+    background: $color-red;
+    color: $color-off-white;
+    border: 1px solid $color-red;
+  }
 }

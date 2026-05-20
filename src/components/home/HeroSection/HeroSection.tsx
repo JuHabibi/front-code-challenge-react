@@ -16,17 +16,20 @@ export function HeroSection({
       <img
         className={styles.backgroundImage}
         src={backgroundAsset.url}
-        alt={backgroundAsset.alt}
+        alt=""
+        aria-hidden="true"
       />
 
       <img
         className={styles.foregroundImage}
         src={foregroundAsset.url}
-        alt={foregroundAsset.alt}
+        alt=""
+        aria-hidden="true"
       />
 
       <div className={styles.content}>
         <h1>{title}</h1>
+        <p>{subtitle}</p>
         <p>{description}</p>
       </div>
     </section>
