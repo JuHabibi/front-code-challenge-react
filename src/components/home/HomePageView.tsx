@@ -27,8 +27,11 @@ export function HomePageView({ data }: HomePageViewProps) {
   return (
     <main>
       <Header title={data.title} />
-      {data.content.map(renderContentBlock)}
-      <Footer {...data.footer} />
+      <div className="container">
+        {data.content.map(renderContentBlock)}
+      </div>
+        <Footer {...data.footer} />
+     
     </main>
   );
 }

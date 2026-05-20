@@ -2,9 +2,16 @@ $color-black: #171717;
 $color-dark-grey: #4c4c49;
 $color-red: #ff5959;
 $color-off-white: #f3f2ef;
+$color-white: #ffffff;
 $color-card-bg: #d1d3ca;
 
 $container-width: 1196px;
+$layout-max-width: 1440px;
+
+/* Breakpoints (mobile-first) */
+$breakpoint-sm: 640px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1440px;
 
 $space-20: 20px;
 $space-40: 40px;

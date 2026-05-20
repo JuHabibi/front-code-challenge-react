@@ -18,10 +18,14 @@ body {
   min-height: 100vh;
   font-weight: $font-weight-regular;
 
-  background: $color-off-white;
+  background: $color-white;
   color: $color-black;
 
   -webkit-font-smoothing: antialiased;
+}
+
+section {
+  margin: 0 0 $space-40  0;
 }
 
 img,
@@ -53,5 +57,5 @@ select {
   max-width: $container-width;
 
   margin: 0 auto;
-  padding-inline: $space-20;
+  padding: $space-60 0;
 }
